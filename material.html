@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B.Tech Details Form</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Enter Details</h2>
+        <form id="detailsForm">
+            <label for="year">Year:</label>
+            <select id="year" name="year" required>
+                <option value="">Select Year</option>
+                <option value="1">1st Year</option>
+                <option value="2">2nd Year</option>
+                <option value="3">3rd Year</option>
+                <option value="4">4th Year</option>
+            </select>
+
+            <label for="department">Department:</label>
+            <select id="department" name="department" required>
+                <option value="">Select Department</option>
+                <option value="cse">Computer Science & Engineering</option>
+                <option value="ece">Electronics & Communication Engineering</option>
+                <option value="eie">Electronics and Instumentation Engineeering</option>
+              
+            </select>
+
+            <label for="semester">Semester:</label>
+            <select id="semester" name="semester" required>
+                <option value="">Select Semester</option>
+                <option value="1">1st Semester</option>
+                <option value="2">2nd Semester</option>
+                <option value="3">3rd Semester</option>
+                <option value="4">4th Semester</option>
+                <option value="5">5th Semester</option>
+                <option value="6">6th Semester</option>
+                <option value="7">7th Semester</option>
+                <option value="8">8th Semester</option>
+            </select>
+
+            <button type="submit">Submit</button>
+        </form>
+        <div class="form group">
+            <label for="text">click here here for uploading document</label>
+         </div>
+         <a href="https://docs.google.com/forms/d/e/1FAIpQLSdIipMCfvSMG345ix7HyLItBtNRnV-QOLhEgSf0eVlQ774Egw/viewform?usp=sf_link ">
+            <button>Upload</button>
+            </a>
+        
+
+        </div>
+
+    </div>
+    <script>
+       
+        const pappercred = [];
+      
+        var year = document.getElementById("year");
+        var department = document.getElementById("department");
+        var sem = document.getElementById("semester");
+        document.getElementById("detailsForm").addEventListener('submit', async(e) =>{
+            e.preventDefault();
+          
+             pappercred.push(year.value)
+             pappercred.push(department.value)
+             pappercred.push(sem.value)
+            if (pappercred[0] === "1" && pappercred[1] === 'cse' && pappercred[2] === '1') {
+                 window.location.href = "https://drive.google.com/drive/folders/1hbr-2y4lEvaVmsYsNQx_KUc5a6ri1fr9?usp=sharing";
+            }
+            if (pappercred[0] === "1" && pappercred[1] === 'cse' && pappercred[2] === '2') {
+                window.location.href = "https://drive.google.com/drive/u/0/folders/1RkqwKdhXSYLltFbbRSx5e0ma2oKj_Db8";
+            }
+            if (pappercred[0] === "1" && pappercred[1] === 'ece' && pappercred[2] === '1') {
+                window.location.href = "https://drive.google.com/drive/folders/1zpv8y-TxOYqorhdqqk5e8m4S0BY8zH3a?usp=sharing";
+            }
+            if (pappercred[0] === "1" && pappercred[1] === 'ece' && pappercred[2] === '2') {
+                window.location.href = "https://drive.google.com/drive/u/0/folders/1eHTgWbm6bt5wBvYmvOhpWx498OxYGFqb";
+            }
+            if (pappercred[0] === "1" && pappercred[1] === 'eie' && pappercred[2] === '1') {
+                window.location.href = "https://drive.google.com/drive/u/0/folders/1HRpJWCSCsnuLQ9UmRKyJfqC1HJmgUTpf";
+            }
+            if (pappercred[0] === "1" && pappercred[1] === 'eie' && pappercred[2] === '2') {
+                window.location.href = "https://drive.google.com/drive/u/0/folders/1OZFiPidEoMnt8s9lCm9G_BHsG5gx6px6";
+            }
+           
+            if (pappercred[0] === "2" && pappercred[1] === 'cse' && pappercred[2] === '3') {
+                window.location.href = "https://drive.google.com/drive/u/0/folders/1RRL-6Ab2UcXGglOsmndmwrLhBOSrGJA-";
+            }
+            if (pappercred[0] === "2" && pappercred[1] === 'cse' && pappercred[2] === '4') {
+                window.location.href = "https://drive.google.com/drive/u/0/folders/1BNritd9U6XV2gul0cQOyPVbTSR-3B7XT";
+            }
+            if (pappercred[0] === "2" && pappercred[1] === 'ece' && pappercred[2] === '3') {
+                window.location.href = "https://drive.google.com/drive/u/0/folders/1KIf7njkCGqfQ3AYxJjTh5l4l-Cj7_NVs";
+            }
+            if (pappercred[0] === "2" && pappercred[1] === 'ece' && pappercred[2] === '4') {
+                window.location.href = "https://drive.google.com/drive/u/0/folders/1olWBoDXROTfvDj_p_tXx-pf9FlZsWlkw";
+            }
+            if (pappercred[0] === "2" && pappercred[1] === 'eie' && pappercred[2] === '3') {
+                window.location.href = "https://drive.google.com/drive/u/0/folders/1TBGOaZjr6QK7f3xSoMQAc9NVfapN-2EO";
+            }
+            if (pappercred[0] === "2" && pappercred[1] === 'eie' && pappercred[2] === '4') {
+                window.location.href = "https://drive.google.com/drive/u/0/folders/14lcBpHdzeCbpuu2D-YXZzlDFfrN5qq46";
+            }
+            if (pappercred[0] === "3" && pappercred[1] === 'cse' && pappercred[2] === '5') {
+                window.location.href = "https://drive.google.com/drive/u/0/folders/1klkRCUK5LY-O-9TU6HSZxCmXAKDnneFI";
+            }
+            if (pappercred[0] === "3" && pappercred[1] === 'cse' && pappercred[2] === '6') {
+                window.location.href = "https://drive.google.com/drive/u/0/folders/1zFhJ_Bgw4Z3nMCeqKNFHd6ktIyoU1NY1";
+            }
+            if (pappercred[0] === "3" && pappercred[1] === 'ece' && pappercred[2] === '5') {
+                window.location.href = "https://drive.google.com/drive/u/0/folders/1wZf92_U2rcpqGdsnkz4hE6lS39rLoW3i";
+            }
+            if (pappercred[0] === "3" && pappercred[1] === 'ece' && pappercred[2] === '6') {
+                window.location.href = "https://drive.google.com/drive/u/0/folders/1n2C7GsDNHcr3hHmBsM6bs-wbSrJh-rAB";
+            }
+            if (pappercred[0] === "3" && pappercred[1] === 'eie' && pappercred[2] === '5') {
+                window.location.href = "https://drive.google.com/drive/u/0/folders/1V_JW1aL1OXLGwEDbv9FH6Y3kljLkipoi";
+            }
+            if (pappercred[0] === "3" && pappercred[1] === 'eie' && pappercred[2] === '6') {
+                window.location.href = "https://drive.google.com/drive/u/0/folders/1e2ykMqtID20PRIj0imo7M68yhiXXRjog";
+            }
+            if (pappercred[0] === "4" && pappercred[1] === 'cse' && pappercred[2] === '7') {
+                window.location.href = "https://drive.google.com/drive/u/0/folders/1NzDC4f2PcemOlkzC3-pL_4fD9-hjZD8-";
+            }
+            if (pappercred[0] === "4" && pappercred[1] === 'cse' && pappercred[2] === '8') {
+                window.location.href = "https://drive.google.com/drive/u/0/folders/1g5BPCpK_DHSMSLaxaNu6vFa2b3UkBAqC";
+            }
+            if (pappercred[0] === "4" && pappercred[1] === 'ece' && pappercred[2] === '7') {
+                window.location.href = "https://drive.google.com/drive/u/0/folders/1rJyC6oeAZ6E2MS_WFvGwqEPoD4I8AiSf";
+            }
+            if (pappercred[0] === "4" && pappercred[1] === 'ece' && pappercred[2] === '8') {
+                window.location.href = "https://drive.google.com/drive/u/0/folders/11Ivknc7vSTtSTW4sFgb9cPd6eySZXL3i";
+            }
+            if (pappercred[0] === "4" && pappercred[1] === 'eie' && pappercred[2] === '7') {
+                window.location.href = "https://drive.google.com/drive/u/0/folders/14AO2kJtWDH_6RXjUcrtCEzsAjbyH7sAN";
+            }
+            if (pappercred[0] === "4" && pappercred[1] === 'eie' && pappercred[2] === '8') {
+                window.location.href = "https://drive.google.com/drive/u/0/folders/13lBK5y_7NDhZCk_2goxbhwbbexVm3PbH";
+            }
+            
+                
+            
+            pappercred = [];
+        });
+        
+    </script>
+</body>
+</html>
