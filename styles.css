@@ -367,4 +367,15 @@ footer{
    main{
     z-index:-1;
    }
-
+.login{
+  display:block
+}
+.logout{
+  display: none;
+}
+.login1{
+  display: none;
+}
+.logout1{
+  display: block;
+}

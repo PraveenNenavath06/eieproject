@@ -15,8 +15,9 @@
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="#services">About</a></li>
                 <li><a class="anchor"  >Materials</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="./studentlogin.html">Login</a></li>
+                <li><a href="#footer">Contact</a></li>
+                <li class="login"><a href="./studentlogin.html">Login</a></li>
+                <li class="logout"><a  onclick="logout()">Logout</a></li>
             </ul>
             <div class="burger" id="burger">
                 <div class="line1"></div>
@@ -31,7 +32,7 @@
         <h1>Welcome to NITS'25</h1>
         <br>
         <h3>Get all your Study Materials at your fingertips!</h3><br>
-        <button id="id1">Get Started</button>
+        <button id="id1" >Get Started</button>
         </div>
         <div class="section">
             <div class="content">
@@ -62,8 +63,8 @@
                <div class="image3"></div>
     </main>
 
-    <footer>
-        <div class="thanks">
+    <footer >
+        <div id="footer" class="thanks">
            <p class="heading5">Thanks for visiting!</p>
         </div>
        <div class="container">
@@ -100,12 +101,29 @@
    </footer>
 
   <script>
-var temp=localStorage.getItem('logedin');
+
+    var change1=document.querySelector(".login");
+    var change2=document.querySelector(".logout");
+    if(localStorage.getItem('loggedIn'))
+    {
+        change1.classList.add('login1');
+        change2.classList.add('logout1');
+    }
+    else{
+        change1.classList.remove('login1');
+        change2.classList.remove('logout1');
+    }
+    function logout(e){
+        localStorage.clear();
+        alert("logged out succesfully");
+        window.location.reload();
+
+    }
 var anchorClicked = document.getElementsByClassName("anchor");
 
     anchorClicked[0].addEventListener('click', (e) => {
-        e.preventDefault();
-        if (temp === 'true') {
+      
+        if (localStorage.getItem('loggedIn') === 'true') {
             window.location.href = "./material.html";
         }
         else{
