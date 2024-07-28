@@ -24,8 +24,7 @@
                 <option value="">Select Department</option>
                 <option value="cse">Computer Science & Engineering</option>
                 <option value="ece">Electronics & Communication Engineering</option>
-                <option value="eie">Electronics and Instumentation Engineeering</option>
-              
+                <option value="eie">Electronics and Instrumentation Engineering</option>
             </select>
 
             <label for="semester">Semester:</label>
@@ -43,109 +42,78 @@
 
             <button type="submit">Submit</button>
         </form>
-        <div class="form group">
-            <label for="text">click here here for uploading document</label>
-         </div>
-         <a href="https://docs.google.com/forms/d/e/1FAIpQLSdIipMCfvSMG345ix7HyLItBtNRnV-QOLhEgSf0eVlQ774Egw/viewform?usp=sf_link ">
-            <button>Upload</button>
-            </a>
-        
-
+        <div class="form-group">
+            <label for="text">Click here for uploading document</label>
         </div>
-
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdIipMCfvSMG345ix7HyLItBtNRnV-QOLhEgSf0eVlQ774Egw/viewform?usp=sf_link">
+            <button>Upload</button>
+        </a>
     </div>
+
     <script>
-       
-        const pappercred = [];
-      
-        var year = document.getElementById("year");
-        var department = document.getElementById("department");
-        var sem = document.getElementById("semester");
-        document.getElementById("detailsForm").addEventListener('submit', async(e) =>{
+        let pappercred = [];
+
+        document.getElementById("detailsForm").addEventListener('submit', (e) => {
             e.preventDefault();
-          
-             pappercred.push(year.value)
-             pappercred.push(department.value)
-             pappercred.push(sem.value)
-            if (pappercred[0] === "1" && pappercred[1] === 'cse' && pappercred[2] === '1') {
-                 window.location.href = "https://drive.google.com/drive/folders/1hbr-2y4lEvaVmsYsNQx_KUc5a6ri1fr9?usp=sharing";
-            }
-            if (pappercred[0] === "1" && pappercred[1] === 'cse' && pappercred[2] === '2') {
+
+            pappercred.push(document.getElementById("year").value);
+            pappercred.push(document.getElementById("department").value);
+            pappercred.push(document.getElementById("semester").value);
+
+            const [year, department, semester] = pappercred;
+
+            if (year === "1" && department === 'cse' && semester === '1') {
+                window.location.href = "https://drive.google.com/drive/folders/1hbr-2y4lEvaVmsYsNQx_KUc5a6ri1fr9?usp=sharing";
+            } else if (year === "1" && department === 'cse' && semester === '2') {
                 window.location.href = "https://drive.google.com/drive/u/0/folders/1RkqwKdhXSYLltFbbRSx5e0ma2oKj_Db8";
-            }
-            if (pappercred[0] === "1" && pappercred[1] === 'ece' && pappercred[2] === '1') {
+            } else if (year === "1" && department === 'ece' && semester === '1') {
                 window.location.href = "https://drive.google.com/drive/folders/1zpv8y-TxOYqorhdqqk5e8m4S0BY8zH3a?usp=sharing";
-            }
-            if (pappercred[0] === "1" && pappercred[1] === 'ece' && pappercred[2] === '2') {
+            } else if (year === "1" && department === 'ece' && semester === '2') {
                 window.location.href = "https://drive.google.com/drive/u/0/folders/1eHTgWbm6bt5wBvYmvOhpWx498OxYGFqb";
-            }
-            if (pappercred[0] === "1" && pappercred[1] === 'eie' && pappercred[2] === '1') {
+            } else if (year === "1" && department === 'eie' && semester === '1') {
                 window.location.href = "https://drive.google.com/drive/u/0/folders/1HRpJWCSCsnuLQ9UmRKyJfqC1HJmgUTpf";
-            }
-            if (pappercred[0] === "1" && pappercred[1] === 'eie' && pappercred[2] === '2') {
+            } else if (year === "1" && department === 'eie' && semester === '2') {
                 window.location.href = "https://drive.google.com/drive/u/0/folders/1OZFiPidEoMnt8s9lCm9G_BHsG5gx6px6";
-            }
-           
-            if (pappercred[0] === "2" && pappercred[1] === 'cse' && pappercred[2] === '3') {
+            } else if (year === "2" && department === 'cse' && semester === '3') {
                 window.location.href = "https://drive.google.com/drive/u/0/folders/1RRL-6Ab2UcXGglOsmndmwrLhBOSrGJA-";
-            }
-            if (pappercred[0] === "2" && pappercred[1] === 'cse' && pappercred[2] === '4') {
+            } else if (year === "2" && department === 'cse' && semester === '4') {
                 window.location.href = "https://drive.google.com/drive/u/0/folders/1BNritd9U6XV2gul0cQOyPVbTSR-3B7XT";
-            }
-            if (pappercred[0] === "2" && pappercred[1] === 'ece' && pappercred[2] === '3') {
+            } else if (year === "2" && department === 'ece' && semester === '3') {
                 window.location.href = "https://drive.google.com/drive/u/0/folders/1KIf7njkCGqfQ3AYxJjTh5l4l-Cj7_NVs";
-            }
-            if (pappercred[0] === "2" && pappercred[1] === 'ece' && pappercred[2] === '4') {
+            } else if (year === "2" && department === 'ece' && semester === '4') {
                 window.location.href = "https://drive.google.com/drive/u/0/folders/1olWBoDXROTfvDj_p_tXx-pf9FlZsWlkw";
-            }
-            if (pappercred[0] === "2" && pappercred[1] === 'eie' && pappercred[2] === '3') {
+            } else if (year === "2" && department === 'eie' && semester === '3') {
                 window.location.href = "https://drive.google.com/drive/u/0/folders/1TBGOaZjr6QK7f3xSoMQAc9NVfapN-2EO";
-            }
-            if (pappercred[0] === "2" && pappercred[1] === 'eie' && pappercred[2] === '4') {
+            } else if (year === "2" && department === 'eie' && semester === '4') {
                 window.location.href = "https://drive.google.com/drive/u/0/folders/14lcBpHdzeCbpuu2D-YXZzlDFfrN5qq46";
-            }
-            if (pappercred[0] === "3" && pappercred[1] === 'cse' && pappercred[2] === '5') {
+            } else if (year === "3" && department === 'cse' && semester === '5') {
                 window.location.href = "https://drive.google.com/drive/u/0/folders/1klkRCUK5LY-O-9TU6HSZxCmXAKDnneFI";
-            }
-            if (pappercred[0] === "3" && pappercred[1] === 'cse' && pappercred[2] === '6') {
+            } else if (year === "3" && department === 'cse' && semester === '6') {
                 window.location.href = "https://drive.google.com/drive/u/0/folders/1zFhJ_Bgw4Z3nMCeqKNFHd6ktIyoU1NY1";
-            }
-            if (pappercred[0] === "3" && pappercred[1] === 'ece' && pappercred[2] === '5') {
+            } else if (year === "3" && department === 'ece' && semester === '5') {
                 window.location.href = "https://drive.google.com/drive/u/0/folders/1wZf92_U2rcpqGdsnkz4hE6lS39rLoW3i";
-            }
-            if (pappercred[0] === "3" && pappercred[1] === 'ece' && pappercred[2] === '6') {
+            } else if (year === "3" && department === 'ece' && semester === '6') {
                 window.location.href = "https://drive.google.com/drive/u/0/folders/1n2C7GsDNHcr3hHmBsM6bs-wbSrJh-rAB";
-            }
-            if (pappercred[0] === "3" && pappercred[1] === 'eie' && pappercred[2] === '5') {
+            } else if (year === "3" && department === 'eie' && semester === '5') {
                 window.location.href = "https://drive.google.com/drive/u/0/folders/1V_JW1aL1OXLGwEDbv9FH6Y3kljLkipoi";
-            }
-            if (pappercred[0] === "3" && pappercred[1] === 'eie' && pappercred[2] === '6') {
+            } else if (year === "3" && department === 'eie' && semester === '6') {
                 window.location.href = "https://drive.google.com/drive/u/0/folders/1e2ykMqtID20PRIj0imo7M68yhiXXRjog";
-            }
-            if (pappercred[0] === "4" && pappercred[1] === 'cse' && pappercred[2] === '7') {
+            } else if (year === "4" && department === 'cse' && semester === '7') {
                 window.location.href = "https://drive.google.com/drive/u/0/folders/1NzDC4f2PcemOlkzC3-pL_4fD9-hjZD8-";
-            }
-            if (pappercred[0] === "4" && pappercred[1] === 'cse' && pappercred[2] === '8') {
+            } else if (year === "4" && department === 'cse' && semester === '8') {
                 window.location.href = "https://drive.google.com/drive/u/0/folders/1g5BPCpK_DHSMSLaxaNu6vFa2b3UkBAqC";
-            }
-            if (pappercred[0] === "4" && pappercred[1] === 'ece' && pappercred[2] === '7') {
+            } else if (year === "4" && department === 'ece' && semester === '7') {
                 window.location.href = "https://drive.google.com/drive/u/0/folders/1rJyC6oeAZ6E2MS_WFvGwqEPoD4I8AiSf";
-            }
-            if (pappercred[0] === "4" && pappercred[1] === 'ece' && pappercred[2] === '8') {
+            } else if (year === "4" && department === 'ece' && semester === '8') {
                 window.location.href = "https://drive.google.com/drive/u/0/folders/11Ivknc7vSTtSTW4sFgb9cPd6eySZXL3i";
-            }
-            if (pappercred[0] === "4" && pappercred[1] === 'eie' && pappercred[2] === '7') {
+            } else if (year === "4" && department === 'eie' && semester === '7') {
                 window.location.href = "https://drive.google.com/drive/u/0/folders/14AO2kJtWDH_6RXjUcrtCEzsAjbyH7sAN";
-            }
-            if (pappercred[0] === "4" && pappercred[1] === 'eie' && pappercred[2] === '8') {
+            } else if (year === "4" && department === 'eie' && semester === '8') {
                 window.location.href = "https://drive.google.com/drive/u/0/folders/13lBK5y_7NDhZCk_2goxbhwbbexVm3PbH";
             }
-            
-                
-            
-            pappercred = [];
+
+            pappercred.length = 0;
         });
-        
     </script>
 </body>
 </html>
