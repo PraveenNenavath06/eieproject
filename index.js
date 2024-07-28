@@ -10,7 +10,8 @@ const conc = mysql.createConnection({
     user: "admin",
     password: "SaiKumar2024",
     database: 'nitsilchar',
-    port: 3306
+    port: 3306,
+    connectTimeout: 10000
 });
 
 // Connect to MySQL
